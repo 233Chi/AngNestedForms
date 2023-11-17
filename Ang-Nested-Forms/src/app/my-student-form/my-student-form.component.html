@@ -1,0 +1,25 @@
+<div>
+    <form [formGroup]="baseForm">
+
+        <div>
+          <label for="firstName">
+            Name
+          </label>
+          <input id="firstName" type="text" formControlName="firstName">
+        </div>
+      
+        <div>
+          <label for="lastName">
+            Address
+          </label>
+          <input id="lastName" type="text" formControlName="lastName">
+        </div>
+
+        <button class="button" (click)="addLesson()">Add Lesson</button>
+
+        <ng-container *ngFor="let lessonForm of (childForms ? childForms.controls: []); let i = index">
+          <app-my-lessons-form></app-my-lessons-form>
+      </ng-container>
+      </form>
+</div>
+

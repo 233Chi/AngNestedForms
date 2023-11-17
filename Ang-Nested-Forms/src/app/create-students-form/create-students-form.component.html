@@ -1,0 +1,5 @@
+<p>Create as many Students as you like!</p>
+    <ng-container *ngFor="let studentForm of getChildFormAsFormGroup; let i = index">
+        <app-my-student-form [baseForm]="studentForm"></app-my-student-form>
+    </ng-container>
+<button class="button" (click)="addStudent()">New Student</button>
